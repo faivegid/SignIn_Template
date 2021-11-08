@@ -1,0 +1,38 @@
+﻿@using SiginIn_Template.Models.DtoModels
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_AccountLayout";
+}
+
+<style>
+
+</style>
+
+
+<div class="form-div bg-white">
+    <form method="post" asp-controller="">
+        @Html.AntiForgeryToken()
+
+        <div class="form-heading mb-3">
+            <h5 class="form-title mb-1">Login Page</h5>
+            <p class="form-message m-0">Please enter your <em>valid creadentials</em> to login</p>
+        </div>
+
+        <div class="form-group">
+            <label for="modelemail" asp-for=@Model.Email>Email</label>
+            <input class="form-control" asp-for=@Model.Email name="Email" id="modelemail" type="email" autofocus/>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="modelpassword" asp-for=@Model.Password>Password</label>
+            <input class="form-control" asp-for=@Model.Password name="Password" id="modelpassword" type="password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="d-flex flex-row-reverse">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+</div>
