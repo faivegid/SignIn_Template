@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using SiginIn_Template.Data;
 
@@ -19,7 +18,6 @@ namespace SiginIn_Template
         public IConfiguration Configuration { get; }
 
 
-
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppContext>();
@@ -30,9 +28,6 @@ namespace SiginIn_Template
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
-
-
-
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

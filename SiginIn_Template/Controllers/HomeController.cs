@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SiginIn_Template.Models.ViewModels;
 using System.Diagnostics;
 
 namespace SiginIn_Template.Controllers

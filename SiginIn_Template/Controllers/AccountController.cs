@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SiginIn_Template.Models.DtoModels;
+using SiginIn_Template.Models.ViewModels;
 
 namespace SiginIn_Template.Controllers
 {
